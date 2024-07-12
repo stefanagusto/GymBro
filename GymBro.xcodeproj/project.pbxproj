@@ -51,6 +51,9 @@
 		B45D3A292C40FFEE00FCA385 /* GymBro */ = {
 			isa = PBXGroup;
 			children = (
+				B45D3A3C2C41018A00FCA385 /* ViewModels */,
+				B45D3A392C41013B00FCA385 /* Views */,
+				B45D3A382C41013500FCA385 /* Models */,
 				B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */,
 				B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */,
 				B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */,
@@ -65,6 +68,27 @@
 				B45D3A312C40FFF000FCA385 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B45D3A382C41013500FCA385 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B45D3A392C41013B00FCA385 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B45D3A3C2C41018A00FCA385 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
