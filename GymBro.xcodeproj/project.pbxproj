@@ -11,6 +11,9 @@
 		B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */; };
 		B45D3A2F2C40FFF000FCA385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */; };
 		B45D3A322C40FFF000FCA385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D3A312C40FFF000FCA385 /* Preview Assets.xcassets */; };
+		B45D3A3E2C41039300FCA385 /* OneRMCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A3D2C41039300FCA385 /* OneRMCalculatorView.swift */; };
+		B45D3A402C41042F00FCA385 /* OneRMCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A3F2C41042F00FCA385 /* OneRMCalculatorViewModel.swift */; };
+		B45D3A442C4104E500FCA385 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A432C4104E500FCA385 /* CalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45D3A312C40FFF000FCA385 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B45D3A3D2C41039300FCA385 /* OneRMCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMCalculatorView.swift; sourceTree = "<group>"; };
+		B45D3A3F2C41042F00FCA385 /* OneRMCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMCalculatorViewModel.swift; sourceTree = "<group>"; };
+		B45D3A432C4104E500FCA385 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		B45D3A382C41013500FCA385 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B45D3A432C4104E500FCA385 /* CalculatorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -80,6 +87,7 @@
 		B45D3A392C41013B00FCA385 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B45D3A3D2C41039300FCA385 /* OneRMCalculatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 		B45D3A3C2C41018A00FCA385 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B45D3A3F2C41042F00FCA385 /* OneRMCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -161,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45D3A402C41042F00FCA385 /* OneRMCalculatorViewModel.swift in Sources */,
+				B45D3A442C4104E500FCA385 /* CalculatorModel.swift in Sources */,
 				B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */,
+				B45D3A3E2C41039300FCA385 /* OneRMCalculatorView.swift in Sources */,
 				B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
