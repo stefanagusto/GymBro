@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TrainingWeight {
+struct TrainingWeightModel {
     let percentage: Double
     let weight: Double
     let reps: Double
