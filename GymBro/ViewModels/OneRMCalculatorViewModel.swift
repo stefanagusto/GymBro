@@ -6,20 +6,32 @@
 //
 
 import Foundation
+import Combine
 
-import Foundation
+class OneRepMaxViewModel: ObservableObject {
+    @Published var weight: String = ""
+    @Published var reps: String = ""
+    @Published var oneRepMax: String = ""
+    @Published var segmentedControlSelection: Int = 0 // 0 for 1RM, 1 for Training Weight
 
-class OneRMCalculatorViewModel: ObservableObject {
-    @Published var weightLifted: String = ""
-        @Published var numberOfReps: String = ""
-        @Published var oneRM: Double?
-
-        func calculate1RM() {
-            guard let weight = Double(weightLifted), let reps = Int(numberOfReps) else {
-                oneRM = nil
-                return
+    private var cancellables = Set<AnyCancellable>()
+    private let calculator = OneRepMaxCalculator()
+    
+    init() {
+        $weight
+            .combineLatest($reps)
+            .map { weight, reps in
+                self.calculateOneRepMax(weight: weight, reps: reps)
             }
-
-            oneRM = CalculatorModel.calculate1RM(weight: weight, reps: reps)
-        }
+            .assign(to: \.oneRepMax, on: self)
+            .store(in: &cancellables)
     }
+    
+    private func calculateOneRepMax(weight: String, reps: String) -> String {
+        guard let weight = Double(weight), let reps = Int(reps), reps > 0 else {
+            return "Invalid input"
+        }
+        let result = calculator.calculateOneRepMax(weight: weight, reps: reps)
+        return String(format: "%.2f kg", result)
+    }
+}

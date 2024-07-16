@@ -1,58 +1,81 @@
-//
-//  OneRMCalculatorView.swift
-//  GymBro
-//
-//  Created by Stefan Agusto Hutapea on 12/07/24.
-//
-
 import SwiftUI
 
-struct OneRMCalculatorView: View {
-    @StateObject private var viewModel = OneRMCalculatorViewModel()
-
+struct OneRepMaxView: View {
+    @ObservedObject var viewModel = OneRepMaxViewModel()
+    
     var body: some View {
-        NavigationView {
-            VStack(spacing: 20) {
-                Text("1RM Calculator")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-
-                TextField("Weight Lifted (kg)", text: $viewModel.weightLifted)
-                    .keyboardType(.decimalPad)
+        VStack {
+            Text("Calculator")
+                .font(.largeTitle)
+                .bold()
+                .padding(.top, 20)
+            
+            Picker("Calculator Type", selection: $viewModel.segmentedControlSelection) {
+                Text("1 Rep Max").tag(0)
+                Text("Training Weight").tag(1)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            if viewModel.segmentedControlSelection == 0 {
+                VStack {
+                    HStack {
+                        Text("When Lifting")
+                        Spacer()
+                        TextField("kg", text: $viewModel.weight)
+                            .keyboardType(.decimalPad)
+                            .multilineTextAlignment(.trailing)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
                     .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-
-                TextField("Number of Reps", text: $viewModel.numberOfReps)
-                    .keyboardType(.numberPad)
+                    
+                    HStack {
+                        Text("Till tired, I can do")
+                        Spacer()
+                        TextField("Reps", text: $viewModel.reps)
+                            .keyboardType(.numberPad)
+                            .multilineTextAlignment(.trailing)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
                     .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-
-                Button(action: viewModel.calculate1RM) {
-                    Text("Calculate 1RM")
-                        .foregroundColor(.white)
+                    
+                    Text("1RM: \(viewModel.oneRepMax)")
+                        .font(.title2)
+                        .bold()
+                        .padding()
+                }
+                .padding()
+            } else {
+                // Training Weight View can go here
+                Button(action: {
+                    // Perform calculation if needed
+                }) {
+                    Text("Calculate")
+                        .font(.title2)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
-                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
-
-                if let oneRM = viewModel.oneRM {
-                    Text("Estimated 1RM: \(String(format: "%.2f", oneRM)) kg")
-                        .font(.title2)
-                        .padding()
-                }
-
-                Spacer()
+                .padding()
+                
             }
-            .padding()
+            
+            Spacer()
+            
+            // Add a tab bar if needed here
         }
+        .padding()
+        .background(Color.white)
+        
     }
 }
 
-struct OneRMCalculatorView_Previews: PreviewProvider {
+struct OneRepMaxView_Previews: PreviewProvider {
     static var previews: some View {
-        OneRMCalculatorView()
+        OneRepMaxView()
     }
 }
