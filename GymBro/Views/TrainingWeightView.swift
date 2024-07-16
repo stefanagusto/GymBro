@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct TrainingWeightView: View {
-    @ObservedObject var viewModel: Epic2ViewModel
+    @ObservedObject var viewModel: TrainingWeightViewModel
     
     var body: some View {
         VStack(spacing: 16) {
             HStack {
-                Text("Your Training Weight")
-                    .font(.system(size: 24, weight: .bold))
-                Spacer()
                 Image(systemName: "figure.strengthtraining.traditional")
-                    .font(.system(size: 24))
+                    .font(.system(size: 17))
+                Text("Your Training Weight")
+                    .font(.system(size: 17, weight: .bold))
+                Spacer()
             }
             .padding(.horizontal)
             
             HStack {
-                Text("1RM")
+                Text("1 RM")
                     .foregroundColor(.black)
                 Spacer()
                 ZStack(alignment: .trailing) {

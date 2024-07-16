@@ -6,12 +6,12 @@ class TrainingWeightViewModel: ObservableObject {
     @Published var reps: String = ""
     @Published var selectedSegment = 0
     @Published var result: Double?
-    @Published var trainingWeights: [TrainingWeight] = []
+    @Published var trainingWeights: [TrainingWeightModel] = []
     @Published var oneRepMax: String = "0"
     @Published var inputEntered: Bool = false
 
     private var cancellables = Set<AnyCancellable>()
-    private let calculator = OneRepMaxCalculator()
+    private let calculator = OneRepMaxCalculatorViewModel()
     
     let segments = ["1 Rep Max", "Training Weight"]
     let percentages: [Double] = [100, 95, 90, 85, 80, 75, 70]
@@ -41,7 +41,7 @@ class TrainingWeightViewModel: ObservableObject {
             trainingWeights = percentages.enumerated().map { (index, percentage) in
                 let liftWeight = result! * (percentage / 100)
                 let reps = repetitions[index]
-                return TrainingWeight(percentage: percentage, weight: liftWeight, reps: reps)
+                return TrainingWeightModel(percentage: percentage, weight: liftWeight, reps: reps)
             }
         }
     }

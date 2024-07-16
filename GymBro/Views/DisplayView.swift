@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct DisplayView: View {
-    @EnvironmentObject private var viewModel: Epic2ViewModel
+    @EnvironmentObject private var viewModel: TrainingWeightViewModel
     
     var body: some View {
         NavigationStack {
@@ -29,6 +29,6 @@ struct DisplayView: View {
 struct Epic2_Previews: PreviewProvider {
     static var previews: some View {
         DisplayView()
-            .environmentObject(Epic2ViewModel())
+            .environmentObject(TrainingWeightViewModel())
     }
 }
