@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */; };
-		B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */; };
 		B45D3A2F2C40FFF000FCA385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */; };
 		B45D3A322C40FFF000FCA385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D3A312C40FFF000FCA385 /* Preview Assets.xcassets */; };
+		E214077F2C44E39300C6F4FA /* Epic1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214077E2C44E39300C6F4FA /* Epic1.swift */; };
+		E21407812C44E3A500C6F4FA /* Epic2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21407802C44E3A500C6F4FA /* Epic2.swift */; };
+		E21407832C44E3C700C6F4FA /* OneRMCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21407822C44E3C700C6F4FA /* OneRMCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B45D3A272C40FFEE00FCA385 /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymBroApp.swift; sourceTree = "<group>"; };
-		B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45D3A312C40FFF000FCA385 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E214077E2C44E39300C6F4FA /* Epic1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic1.swift; sourceTree = "<group>"; };
+		E21407802C44E3A500C6F4FA /* Epic2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic2.swift; sourceTree = "<group>"; };
+		E21407822C44E3C700C6F4FA /* OneRMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRMCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */,
-				B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */,
+				E21407822C44E3C700C6F4FA /* OneRMCalculator.swift */,
+				E214077E2C44E39300C6F4FA /* Epic1.swift */,
+				E21407802C44E3A500C6F4FA /* Epic2.swift */,
 				B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */,
 				B45D3A302C40FFF000FCA385 /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */,
+				E214077F2C44E39300C6F4FA /* Epic1.swift in Sources */,
+				E21407812C44E3A500C6F4FA /* Epic2.swift in Sources */,
+				E21407832C44E3C700C6F4FA /* OneRMCalculator.swift in Sources */,
 				B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
