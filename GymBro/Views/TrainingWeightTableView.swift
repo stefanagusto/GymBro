@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct TrainingWeightTable: View {
-    var trainingWeights: [TrainingWeight]
+struct TrainingWeightTableView: View {
+    var trainingWeights: [TrainingWeightModel]
     
     var body: some View {
         ForEach(trainingWeights, id: \.percentage) { weight in

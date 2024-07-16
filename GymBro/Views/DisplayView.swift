@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct Epic2: View {
-    @EnvironmentObject private var viewModel: Epic2ViewModel
+struct DisplayView: View {
+    @EnvironmentObject private var viewModel: TrainingWeightViewModel
     
     var body: some View {
         NavigationStack {
@@ -15,7 +15,7 @@ struct Epic2: View {
                 }
                 CalculateButtonView(calculateAction: viewModel.calculate)
                 Divider()
-                if let result = viewModel.result {
+                if viewModel.selectedSegment == 1, let result = viewModel.result {
                     ResultView(result: result, trainingWeights: viewModel.trainingWeights)
                 }
                 Spacer()
@@ -28,7 +28,7 @@ struct Epic2: View {
 
 struct Epic2_Previews: PreviewProvider {
     static var previews: some View {
-        Epic2()
-            .environmentObject(Epic2ViewModel())
+        DisplayView()
+            .environmentObject(TrainingWeightViewModel())
     }
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A77552BD2C460F8F0005F6B6 /* TrainingWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552BC2C460F8F0005F6B6 /* TrainingWeight.swift */; };
-		A77552BF2C460F980005F6B6 /* Epic2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552BE2C460F980005F6B6 /* Epic2.swift */; };
-		A77552C12C460F9F0005F6B6 /* Epic2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552C02C460F9F0005F6B6 /* Epic2ViewModel.swift */; };
+		A77552BD2C460F8F0005F6B6 /* TrainingWeightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552BC2C460F8F0005F6B6 /* TrainingWeightModel.swift */; };
+		A77552BF2C460F980005F6B6 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552BE2C460F980005F6B6 /* DisplayView.swift */; };
+		A77552C12C460F9F0005F6B6 /* TrainingWeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552C02C460F9F0005F6B6 /* TrainingWeightViewModel.swift */; };
 		B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */; };
 		B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */; };
 		B45D3A2F2C40FFF000FCA385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */; };
@@ -21,14 +21,14 @@
 		B4F4C9472C466390001AEF08 /* CalculateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C9462C466390001AEF08 /* CalculateButtonView.swift */; };
 		B4F4C94B2C4663E2001AEF08 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C94A2C4663E2001AEF08 /* ResultView.swift */; };
 		B4F4C94D2C4664F5001AEF08 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C94C2C4664F5001AEF08 /* BottomNavigationView.swift */; };
-		B4F4C94F2C46651C001AEF08 /* TrainingWeightTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C94E2C46651C001AEF08 /* TrainingWeightTable.swift */; };
-		B4F4C9512C46681D001AEF08 /* OneRepMaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C9502C46681D001AEF08 /* OneRepMaxCalculator.swift */; };
+		B4F4C94F2C46651C001AEF08 /* TrainingWeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C94E2C46651C001AEF08 /* TrainingWeightTableView.swift */; };
+		B4F4C9512C46681D001AEF08 /* OneRepMaxCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C9502C46681D001AEF08 /* OneRepMaxCalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A77552BC2C460F8F0005F6B6 /* TrainingWeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingWeight.swift; sourceTree = "<group>"; };
-		A77552BE2C460F980005F6B6 /* Epic2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Epic2.swift; sourceTree = "<group>"; };
-		A77552C02C460F9F0005F6B6 /* Epic2ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Epic2ViewModel.swift; sourceTree = "<group>"; };
+		A77552BC2C460F8F0005F6B6 /* TrainingWeightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingWeightModel.swift; sourceTree = "<group>"; };
+		A77552BE2C460F980005F6B6 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
+		A77552C02C460F9F0005F6B6 /* TrainingWeightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingWeightViewModel.swift; sourceTree = "<group>"; };
 		B45D3A272C40FFEE00FCA385 /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymBroApp.swift; sourceTree = "<group>"; };
 		B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		B4F4C9462C466390001AEF08 /* CalculateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonView.swift; sourceTree = "<group>"; };
 		B4F4C94A2C4663E2001AEF08 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		B4F4C94C2C4664F5001AEF08 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
-		B4F4C94E2C46651C001AEF08 /* TrainingWeightTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingWeightTable.swift; sourceTree = "<group>"; };
-		B4F4C9502C46681D001AEF08 /* OneRepMaxCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxCalculator.swift; sourceTree = "<group>"; };
+		B4F4C94E2C46651C001AEF08 /* TrainingWeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingWeightTableView.swift; sourceTree = "<group>"; };
+		B4F4C9502C46681D001AEF08 /* OneRepMaxCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxCalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		B45D3A382C41013500FCA385 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A77552BC2C460F8F0005F6B6 /* TrainingWeight.swift */,
+				A77552BC2C460F8F0005F6B6 /* TrainingWeightModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				B4F4C93D2C466203001AEF08 /* Components */,
-				A77552BE2C460F980005F6B6 /* Epic2.swift */,
+				A77552BE2C460F980005F6B6 /* DisplayView.swift */,
 				B4F4C9422C4662D8001AEF08 /* OneRepMaxView.swift */,
 				B4F4C9442C466335001AEF08 /* TrainingWeightView.swift */,
 				B4F4C94A2C4663E2001AEF08 /* ResultView.swift */,
-				B4F4C94E2C46651C001AEF08 /* TrainingWeightTable.swift */,
+				B4F4C94E2C46651C001AEF08 /* TrainingWeightTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,8 +118,8 @@
 		B45D3A3C2C41018A00FCA385 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A77552C02C460F9F0005F6B6 /* Epic2ViewModel.swift */,
-				B4F4C9502C46681D001AEF08 /* OneRepMaxCalculator.swift */,
+				A77552C02C460F9F0005F6B6 /* TrainingWeightViewModel.swift */,
+				B4F4C9502C46681D001AEF08 /* OneRepMaxCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,16 +208,16 @@
 				B4F4C9432C4662D8001AEF08 /* OneRepMaxView.swift in Sources */,
 				B4F4C9412C46622B001AEF08 /* SegmentedControlView.swift in Sources */,
 				B4F4C94B2C4663E2001AEF08 /* ResultView.swift in Sources */,
-				B4F4C94F2C46651C001AEF08 /* TrainingWeightTable.swift in Sources */,
-				A77552BD2C460F8F0005F6B6 /* TrainingWeight.swift in Sources */,
+				B4F4C94F2C46651C001AEF08 /* TrainingWeightTableView.swift in Sources */,
+				A77552BD2C460F8F0005F6B6 /* TrainingWeightModel.swift in Sources */,
 				B4F4C93F2C466211001AEF08 /* HeaderView.swift in Sources */,
 				B4F4C94D2C4664F5001AEF08 /* BottomNavigationView.swift in Sources */,
-				B4F4C9512C46681D001AEF08 /* OneRepMaxCalculator.swift in Sources */,
+				B4F4C9512C46681D001AEF08 /* OneRepMaxCalculatorViewModel.swift in Sources */,
 				B4F4C9452C466335001AEF08 /* TrainingWeightView.swift in Sources */,
 				B4F4C9472C466390001AEF08 /* CalculateButtonView.swift in Sources */,
-				A77552BF2C460F980005F6B6 /* Epic2.swift in Sources */,
+				A77552BF2C460F980005F6B6 /* DisplayView.swift in Sources */,
 				B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */,
-				A77552C12C460F9F0005F6B6 /* Epic2ViewModel.swift in Sources */,
+				A77552C12C460F9F0005F6B6 /* TrainingWeightViewModel.swift in Sources */,
 				B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

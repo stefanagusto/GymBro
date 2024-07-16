@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResultView: View {
     var result: Double
-    var trainingWeights: [TrainingWeight]
+    var trainingWeights: [TrainingWeightModel]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,7 +31,7 @@ struct ResultView: View {
             Divider()
             
             ScrollView {
-                TrainingWeightTable(trainingWeights: trainingWeights)
+                TrainingWeightTableView(trainingWeights: trainingWeights)
             }
             .frame(maxHeight: 500) // Set a max height for the scroll view
         }

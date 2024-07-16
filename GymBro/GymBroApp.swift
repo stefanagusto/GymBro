@@ -11,7 +11,8 @@ import SwiftUI
 struct GymBroApp: App {
     var body: some Scene {
         WindowGroup {
-            Epic2()
+            DisplayView()
+                .environmentObject(TrainingWeightViewModel())
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OneRepMaxCalculator {
+struct OneRepMaxCalculatorViewModel {
     // Function to calculate 1RM using Epley's formula
     func calculateOneRepMax(weight: Double, reps: Int) -> Double {
         if reps <= 8 {
