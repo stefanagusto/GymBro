@@ -13,9 +13,8 @@ struct Epic2: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("Estimate Your")
+                Text("Weight Calculator")
                     .font(.system(size: 34, weight: .bold))
-                    .padding(.trailing, 140)
                     .padding(.top, 40)
                 
                 Picker("", selection: $viewModel.selectedSegment) {
@@ -24,22 +23,97 @@ struct Epic2: View {
                             .tag(index)
                     }
                 }
-                .frame(width: 293, height:  28)
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
-                .cornerRadius(9)
                 
-                HStack {
-                    TextField(viewModel.selectedSegment == 0 ? "When Lifting" : "1RM", text: $viewModel.weight)
-                        .frame(height: 44)
-                        .keyboardType(.decimalPad)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .cornerRadius(10)
-                    Text("kg")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .padding(.leading, 5)
+                Group {
+                    if viewModel.selectedSegment == 0 {
+                        VStack(spacing: 16) {
+                            HStack {
+                                Text("Your 1 Rep Max")
+                                    .font(.system(size: 24, weight: .bold))
+                                Spacer()
+                                Image(systemName: "figure.strengthtraining.traditional")
+                                    .font(.system(size: 24))
+                            }
+                            .padding(.horizontal)
+                            
+                            VStack(spacing: 0) {
+                                HStack {
+                                    Text("When Lifting")
+                                        .foregroundColor(.black)
+                                    Spacer()
+                                    ZStack(alignment: .trailing) {
+                                        if viewModel.weight.isEmpty {
+                                            Text("kg")
+                                                .foregroundColor(.gray)
+                                        }
+                                        TextField("", text: $viewModel.weight)
+                                            .keyboardType(.decimalPad)
+                                            .multilineTextAlignment(.trailing)
+                                            .frame(width: 60)
+                                    }
+                                }
+                                .padding([.vertical], 8)
+                                
+                                Divider()
+                                
+                                HStack {
+                                    Text("Till tired, I can do")
+                                        .foregroundColor(.black)
+                                    Spacer()
+                                    ZStack(alignment: .trailing) {
+                                        if viewModel.reps.isEmpty {
+                                            Text("reps")
+                                                .foregroundColor(.gray)
+                                        }
+                                        TextField("", text: $viewModel.reps)
+                                            .keyboardType(.numberPad)
+                                            .multilineTextAlignment(.trailing)
+                                            .frame(width: 60)
+                                    }
+                                }
+                                .padding([.vertical], 8)
+                            }
+                            .padding(.horizontal)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                    } else {
+                        VStack(spacing: 16) {
+                            HStack {
+                                Text("Your Training Weight")
+                                    .font(.system(size: 24, weight: .bold))
+                                Spacer()
+                                Image(systemName: "figure.strengthtraining.traditional")
+                                    .font(.system(size: 24))
+                            }
+                            .padding(.horizontal)
+                            
+                            HStack {
+                                Text("1RM")
+                                    .foregroundColor(.black)
+                                Spacer()
+                                ZStack(alignment: .trailing) {
+                                    if viewModel.weight.isEmpty {
+                                        Text("kg")
+                                            .foregroundColor(.gray)
+                                    }
+                                    TextField("", text: $viewModel.weight)
+                                        .keyboardType(.decimalPad)
+                                        .multilineTextAlignment(.trailing)
+                                        .frame(width: 60)
+                                }
+                            }
+                            .padding([.vertical], 8)
+                            .padding(.horizontal)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                    }
                 }
-                .padding(.horizontal)
                 
                 Button(action: {
                     viewModel.calculate()
@@ -109,7 +183,7 @@ struct Epic2: View {
                     VStack {
                         Image(systemName: "list.bullet.rectangle.portrait")
                             .font(.system(size: 24))
-                        Text("Planning")
+                        Text("Record")
                             .font(.system(size: 14))
                     }
                     Spacer()
@@ -128,19 +202,19 @@ struct TrainingWeightTable: View {
     var trainingWeights: [TrainingWeight]
     
     var body: some View {
-            ForEach(trainingWeights, id: \.percentage) { weight in
-                HStack {
-                    Text("\(String(format: "%.1f", weight.percentage))%")
-                    Spacer()
-                    Text("\(String(format: "%.1f", weight.weight)) kg")
-                    Spacer()
-                    Text("\(String(format: "%.0f", weight.reps))")
-                }
-                .padding([.horizontal, .vertical], 8)
-                .font(.system(size: 14))
-                Divider()
-                    .padding(.horizontal, 5)
+        ForEach(trainingWeights, id: \.percentage) { weight in
+            HStack {
+                Text("\(String(format: "%.1f", weight.percentage))%")
+                Spacer()
+                Text("\(String(format: "%.1f", weight.weight)) kg")
+                Spacer()
+                Text("\(String(format: "%.0f", weight.reps))")
             }
+            .padding([.horizontal, .vertical], 8)
+            .font(.system(size: 14))
+            Divider()
+                .padding(.horizontal, 5)
+        }
     }
 }
 

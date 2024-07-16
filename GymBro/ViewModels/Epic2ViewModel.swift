@@ -9,14 +9,13 @@ import SwiftUI
 
 class Epic2ViewModel: ObservableObject {
     @Published var weight: String = ""
+    @Published var reps: String = ""
     @Published var selectedSegment = 0
     @Published var result: Double?
     @Published var trainingWeights: [TrainingWeight] = []
     
     let segments = ["1 Rep Max", "Training Weight"]
-//    let percentages: [Double] = [100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50]
     let percentages: [Double] = [100, 95, 90, 85, 80, 75, 70]
-//    let repetitions: [Double] = [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 30]
     let repetitions: [Double] = [1, 2, 4, 6, 8, 10, 12]
     
     func calculate() {
@@ -24,10 +23,15 @@ class Epic2ViewModel: ObservableObject {
             result = nil
             return
         }
+        
         if selectedSegment == 0 {
-            result = weightValue
+            guard let repsValue = Double(reps) else {
+                result = nil
+                return
+            }
+            result = weightValue * (36 / (37 - repsValue))
         } else {
-            result = weightValue * (36 / (37 - 1)) // Assuming 1 RM for training weight
+            result = weightValue
         }
         
         trainingWeights = percentages.enumerated().map { (index, percentage) in
