@@ -33,7 +33,7 @@ struct OneRepMaxView: View {
             }
             .frame(width: 330)
             .padding()
-            .background(Color.white)
+            .background(Color.bgRM)
             .cornerRadius(10)
             
             Divider()
@@ -41,7 +41,7 @@ struct OneRepMaxView: View {
             VStack(spacing: 0) {
                 HStack {
                     Text("When Lifting")
-                        .foregroundColor(.black)
+                        
                     Spacer()
                     ZStack(alignment: .trailing) {
                         if viewModel.weight.isEmpty {
@@ -52,6 +52,7 @@ struct OneRepMaxView: View {
                             .keyboardType(.decimalPad)
                             .multilineTextAlignment(.trailing)
                             .frame(width: 60)
+                            
                     }
                 }
                 .padding([.vertical], 8)
@@ -60,7 +61,7 @@ struct OneRepMaxView: View {
                 
                 HStack {
                     Text("Till tired, I can do")
-                        .foregroundColor(.black)
+                        
                     Spacer()
                     ZStack(alignment: .trailing) {
                         if viewModel.reps.isEmpty {
@@ -71,12 +72,13 @@ struct OneRepMaxView: View {
                             .keyboardType(.numberPad)
                             .multilineTextAlignment(.trailing)
                             .frame(width: 60)
+                            
                     }
                 }
                 .padding([.vertical], 8)
             }
             .padding(.horizontal)
-            .background(Color.white)
+            .background(Color.bgRM)
             .cornerRadius(10)
         }
         .padding(.horizontal)

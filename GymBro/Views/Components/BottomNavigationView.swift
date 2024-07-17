@@ -28,7 +28,7 @@ struct BottomNavigationView: View {
             Spacer()
         }
         .padding()
-        .background(Color(UIColor.systemGray6))
+        .background(Color.bgApp)
         .cornerRadius(20)
         .padding(.horizontal)
     }
