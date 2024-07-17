@@ -12,7 +12,8 @@ struct CalculateButtonView: View {
     
     var body: some View {
         Button(action: calculateAction) {
-            Text(LocalizedStringKey("Calculate"))
+            Text("Calculate")
+                .fontWeight(.semibold)
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.blue)

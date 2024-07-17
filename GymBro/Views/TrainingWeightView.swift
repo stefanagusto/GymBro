@@ -14,15 +14,16 @@ struct TrainingWeightView: View {
         VStack(spacing: 16) {
             HStack {
                 Image(systemName: "figure.strengthtraining.traditional")
-                    .font(.system(size: 17))
-                Text(LocalizedStringKey("Your Training Weight"))
+                    .font(.system(size: 22))
+                Text("Your Training Weight")
                     .font(.system(size: 17, weight: .bold))
                 Spacer()
             }
-            .padding(.horizontal)
+//            .padding(.horizontal)
+            .padding(.trailing, 75)
             
             HStack {
-                Text(LocalizedStringKey("1 Rep Max"))
+                Text("1 RM")
                     
                 Spacer()
                 ZStack(alignment: .trailing) {

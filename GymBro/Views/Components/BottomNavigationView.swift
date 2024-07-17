@@ -14,7 +14,7 @@ struct BottomNavigationView: View {
             VStack {
                 Image(systemName: "dumbbell.fill")
                     .font(.system(size: 24))
-                Text(LocalizedStringKey("Calculator"))
+                Text("Calculator")
                     .font(.system(size: 14))
             }
             .foregroundColor(.blue)
@@ -22,7 +22,7 @@ struct BottomNavigationView: View {
             VStack {
                 Image(systemName: "list.bullet.rectangle.portrait")
                     .font(.system(size: 24))
-                Text(LocalizedStringKey("Record"))
+                Text("Record")
                     .font(.system(size: 14))
             }
             Spacer()

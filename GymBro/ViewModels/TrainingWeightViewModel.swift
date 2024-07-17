@@ -1,6 +1,5 @@
 import Foundation
 import Combine
-import SwiftUI
 
 class TrainingWeightViewModel: ObservableObject {
     @Published var weight: String = ""
@@ -10,11 +9,12 @@ class TrainingWeightViewModel: ObservableObject {
     @Published var trainingWeights: [TrainingWeightModel] = []
     @Published var oneRepMax: String = "0"
     @Published var inputEntered: Bool = false
+    @Published var resultShow: Bool = false
 
     private var cancellables = Set<AnyCancellable>()
     private let calculator = OneRepMaxCalculatorViewModel()
     
-    let segments = [LocalizedStringKey("1 Rep Max"), LocalizedStringKey("Training Weight")]
+    let segments = ["1 Rep Max", "Training Weight"]
     let percentages: [Double] = [100, 95, 90, 85, 80, 75, 70]
     let repetitions: [Double] = [1, 2, 4, 6, 8, 10, 12]
     
@@ -37,6 +37,7 @@ class TrainingWeightViewModel: ObservableObject {
         
         if selectedSegment == 0 {
             oneRepMax = calculateOneRepMax(weight: weight, reps: reps)
+            resultShow = true
         } else {
             result = weightValue
             trainingWeights = percentages.enumerated().map { (index, percentage) in

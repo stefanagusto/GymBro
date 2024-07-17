@@ -18,11 +18,11 @@ struct ResultView: View {
                     .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.blue)
                 Spacer()
-                Text(LocalizedStringKey("Weight (kg)"))
+                Text("Weight (kg)")
                     .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.blue)
                 Spacer()
-                Text(LocalizedStringKey("Reps"))
+                Text("Reps")
                     .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.blue)
             }
@@ -33,13 +33,15 @@ struct ResultView: View {
             ScrollView {
                 TrainingWeightTableView(trainingWeights: trainingWeights)
             }
-            .frame(maxHeight: 500) // Set a max height for the scroll view
+//            .frame(maxHeight: 500) // Set a max height for the scroll view
+            .frame(height: 200)
         }
         .background(Color.bgRM)
         .cornerRadius(10)
         .padding()
     }
 }
+
 //#Preview {
 //    ResultView()
 //}

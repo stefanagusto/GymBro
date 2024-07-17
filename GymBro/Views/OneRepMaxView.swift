@@ -7,12 +7,13 @@ struct OneRepMaxView: View {
         VStack(spacing: 14) {
             HStack {
                 Image(systemName: "figure.strengthtraining.traditional")
-                    .font(.system(size: 17))
-                Text(LocalizedStringKey("Your 1 Rep Max"))
+                    .font(.system(size: 22))
+                Text("Your 1 Rep Max")
                     .font(.system(size: 17, weight: .bold))
                 Spacer()
             }
-            .padding(.horizontal)
+//            .padding(.horizontal)
+            .padding(.trailing, 75)
             
             VStack(alignment: .center, spacing: 10) {
                 HStack(spacing: 0) {
@@ -25,8 +26,8 @@ struct OneRepMaxView: View {
                         .padding(.top, 25)
                 }
                 if !viewModel.inputEntered {
-                    Text(LocalizedStringKey("Please input to show your 1 RM"))
-                        .foregroundColor(.gray)
+                    Text("Please Input to show your 1RM")
+                        .foregroundColor(.blue)
                         .font(.system(size: 11))
                 }
             }
@@ -39,7 +40,7 @@ struct OneRepMaxView: View {
             
             VStack(spacing: 0) {
                 HStack {
-                    Text(LocalizedStringKey("When Lifting"))
+                    Text("When Lifting")
                         
                     Spacer()
                     ZStack(alignment: .trailing) {
@@ -59,12 +60,12 @@ struct OneRepMaxView: View {
                 Divider()
                 
                 HStack {
-                    Text(LocalizedStringKey("Till tired, i can do"))
+                    Text("Till tired, I can do")
                         
                     Spacer()
                     ZStack(alignment: .trailing) {
                         if viewModel.reps.isEmpty {
-                            Text(LocalizedStringKey("Reps"))
+                            Text("reps")
                                 .foregroundColor(.gray)
                         }
                         TextField("", text: $viewModel.reps)
