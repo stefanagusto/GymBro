@@ -9,6 +9,7 @@ class TrainingWeightViewModel: ObservableObject {
     @Published var trainingWeights: [TrainingWeightModel] = []
     @Published var oneRepMax: String = "0"
     @Published var inputEntered: Bool = false
+    @Published var resultShow: Bool = false
 
     private var cancellables = Set<AnyCancellable>()
     private let calculator = OneRepMaxCalculatorViewModel()
@@ -36,6 +37,7 @@ class TrainingWeightViewModel: ObservableObject {
         
         if selectedSegment == 0 {
             oneRepMax = calculateOneRepMax(weight: weight, reps: reps)
+            resultShow = true
         } else {
             result = weightValue
             trainingWeights = percentages.enumerated().map { (index, percentage) in

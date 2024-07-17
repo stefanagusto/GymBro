@@ -10,10 +10,13 @@ struct DisplayView: View {
                 SegmentedControlView(selectedSegment: $viewModel.selectedSegment, segments: viewModel.segments)
                 if viewModel.selectedSegment == 0 {
                     OneRepMaxView(viewModel: viewModel)
+                    CalculateButtonView(calculateAction: viewModel.calculate)
+                    RecordButtonView()
                 } else {
                     TrainingWeightView(viewModel: viewModel)
+                    CalculateButtonView(calculateAction: viewModel.calculate)
                 }
-                CalculateButtonView(calculateAction: viewModel.calculate)
+                
                 Divider()
                 if viewModel.selectedSegment == 1, let result = viewModel.result {
                     ResultView(result: result, trainingWeights: viewModel.trainingWeights)
