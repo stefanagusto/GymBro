@@ -11,7 +11,8 @@ import SwiftUI
 struct GymBroApp: App {
     var body: some Scene {
         WindowGroup {
-            OneRMCalculator()
+            DisplayView()
+                .environmentObject(TrainingWeightViewModel())
         }
     }
 }

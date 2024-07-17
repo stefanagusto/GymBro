@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  GymBro
+
+  Created by Theresia Angela Ayrin on 17/07/24.
+  
+*/
+
+"Weight Calculator" = "Kalkulator Beban";
+"1 Rep Max" = "1 Repetisi Maksimal";
+"Your 1 Rep Max" = "1 Repetisi Maksimal Anda";
+"Training Weight" = "Beban Latihan";
+"Your Training Weight" = "Beban Latihan Anda";
+"Please input to show your 1 RM" = "Harap Masukan data untuk menampilkan 1 RM anda";
+"When Lifting" = "Ketika Mengangkat";
+"Till tired, i can do" = "Hingga lelah, aku mampu hingga";
+"Calculator" = "Kalkulator";
+"Record" = "Riwayat";
+"Calculate" = "Hitung";
+"Weight (kg)" = "Beban (kg)";
+"Reps" = "repetisi";
