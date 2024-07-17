@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CalculateButtonView: View {
     var calculateAction: () -> Void
+    @EnvironmentObject var viewModel: TrainingWeightViewModel
     
     var body: some View {
         Button(action: calculateAction) {
@@ -21,6 +22,7 @@ struct CalculateButtonView: View {
                 .cornerRadius(40)
         }
         .padding(.horizontal)
+        
     }
 }
 

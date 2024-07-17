@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct GymBroApp: App {
+    @StateObject private var viewModel = TrainingWeightViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            DisplayView()
-                .environmentObject(TrainingWeightViewModel())
+            BottomNavigationView()
+                .environmentObject(viewModel)
+                .modelContainer(for: RecordModel.self)
         }
     }
 }

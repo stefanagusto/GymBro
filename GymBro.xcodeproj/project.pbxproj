@@ -11,6 +11,9 @@
 		A77552BF2C460F980005F6B6 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552BE2C460F980005F6B6 /* DisplayView.swift */; };
 		A77552C12C460F9F0005F6B6 /* TrainingWeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552C02C460F9F0005F6B6 /* TrainingWeightViewModel.swift */; };
 		A77552C62C47699D0005F6B6 /* RecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552C52C47699D0005F6B6 /* RecordButtonView.swift */; };
+		A77552C82C47A91E0005F6B6 /* HeaderViewRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552C72C47A91E0005F6B6 /* HeaderViewRecord.swift */; };
+		A77552CA2C47AC770005F6B6 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552C92C47AC770005F6B6 /* RecordModel.swift */; };
+		A77552CC2C47B06A0005F6B6 /* RecordProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77552CB2C47B06A0005F6B6 /* RecordProgressionView.swift */; };
 		B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */; };
 		B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */; };
 		B45D3A2F2C40FFF000FCA385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D3A2E2C40FFF000FCA385 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		A77552BE2C460F980005F6B6 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		A77552C02C460F9F0005F6B6 /* TrainingWeightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingWeightViewModel.swift; sourceTree = "<group>"; };
 		A77552C52C47699D0005F6B6 /* RecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonView.swift; sourceTree = "<group>"; };
+		A77552C72C47A91E0005F6B6 /* HeaderViewRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewRecord.swift; sourceTree = "<group>"; };
+		A77552C92C47AC770005F6B6 /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		A77552CB2C47B06A0005F6B6 /* RecordProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressionView.swift; sourceTree = "<group>"; };
 		B45D3A272C40FFEE00FCA385 /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45D3A2A2C40FFEE00FCA385 /* GymBroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymBroApp.swift; sourceTree = "<group>"; };
 		B45D3A2C2C40FFEE00FCA385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		B45D3A382C41013500FCA385 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A77552C92C47AC770005F6B6 /* RecordModel.swift */,
 				A77552BC2C460F8F0005F6B6 /* TrainingWeightModel.swift */,
 			);
 			path = Models;
@@ -113,6 +120,7 @@
 				B4F4C9442C466335001AEF08 /* TrainingWeightView.swift */,
 				B4F4C94A2C4663E2001AEF08 /* ResultView.swift */,
 				B4F4C94E2C46651C001AEF08 /* TrainingWeightTableView.swift */,
+				A77552CB2C47B06A0005F6B6 /* RecordProgressionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 				B4F4C9462C466390001AEF08 /* CalculateButtonView.swift */,
 				B4F4C94C2C4664F5001AEF08 /* BottomNavigationView.swift */,
 				A77552C52C47699D0005F6B6 /* RecordButtonView.swift */,
+				A77552C72C47A91E0005F6B6 /* HeaderViewRecord.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 				B4F4C9412C46622B001AEF08 /* SegmentedControlView.swift in Sources */,
 				B4F4C94B2C4663E2001AEF08 /* ResultView.swift in Sources */,
 				B4F4C94F2C46651C001AEF08 /* TrainingWeightTableView.swift in Sources */,
+				A77552C82C47A91E0005F6B6 /* HeaderViewRecord.swift in Sources */,
 				A77552BD2C460F8F0005F6B6 /* TrainingWeightModel.swift in Sources */,
 				B4F4C93F2C466211001AEF08 /* HeaderView.swift in Sources */,
 				B4F4C94D2C4664F5001AEF08 /* BottomNavigationView.swift in Sources */,
@@ -219,8 +229,10 @@
 				B4F4C9452C466335001AEF08 /* TrainingWeightView.swift in Sources */,
 				A77552C62C47699D0005F6B6 /* RecordButtonView.swift in Sources */,
 				B4F4C9472C466390001AEF08 /* CalculateButtonView.swift in Sources */,
+				A77552CA2C47AC770005F6B6 /* RecordModel.swift in Sources */,
 				A77552BF2C460F980005F6B6 /* DisplayView.swift in Sources */,
 				B45D3A2D2C40FFEE00FCA385 /* ContentView.swift in Sources */,
+				A77552CC2C47B06A0005F6B6 /* RecordProgressionView.swift in Sources */,
 				A77552C12C460F9F0005F6B6 /* TrainingWeightViewModel.swift in Sources */,
 				B45D3A2B2C40FFEE00FCA385 /* GymBroApp.swift in Sources */,
 			);
