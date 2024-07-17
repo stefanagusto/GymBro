@@ -17,7 +17,6 @@ struct DisplayView: View {
                     CalculateButtonView(calculateAction: viewModel.calculate)
                 }
 
-                CalculateButtonView(calculateAction: viewModel.calculate)
                 if viewModel.selectedSegment == 1, let result = viewModel.result {
                     ResultView(result: result, trainingWeights: viewModel.trainingWeights)
                 }
