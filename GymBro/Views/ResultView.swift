@@ -33,13 +33,15 @@ struct ResultView: View {
             ScrollView {
                 TrainingWeightTableView(trainingWeights: trainingWeights)
             }
-            .frame(maxHeight: 500) // Set a max height for the scroll view
+//            .frame(maxHeight: 500) // Set a max height for the scroll view
+            .frame(height: 200)
         }
         .background(Color.bgRM)
         .cornerRadius(10)
         .padding()
     }
 }
+
 //#Preview {
 //    ResultView()
 //}

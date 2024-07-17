@@ -7,12 +7,13 @@ struct OneRepMaxView: View {
         VStack(spacing: 14) {
             HStack {
                 Image(systemName: "figure.strengthtraining.traditional")
-                    .font(.system(size: 17))
+                    .font(.system(size: 22))
                 Text("Your 1 Rep Max")
                     .font(.system(size: 17, weight: .bold))
                 Spacer()
             }
-            .padding(.horizontal)
+//            .padding(.horizontal)
+            .padding(.trailing, 75)
             
             VStack(alignment: .center, spacing: 10) {
                 HStack(spacing: 0) {
@@ -26,7 +27,7 @@ struct OneRepMaxView: View {
                 }
                 if !viewModel.inputEntered {
                     Text("Please Input to show your 1RM")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.blue)
                         .font(.system(size: 11))
                 }
             }

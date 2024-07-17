@@ -19,6 +19,8 @@ struct SegmentedControlView: View {
                     .tag(index)
             }
         }
+        .frame(width: 293)
+        .cornerRadius(9.0)
         .pickerStyle(SegmentedPickerStyle())
         .padding(.horizontal)
     }
