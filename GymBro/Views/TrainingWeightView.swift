@@ -23,7 +23,7 @@ struct TrainingWeightView: View {
             
             HStack {
                 Text("1 RM")
-                    .foregroundColor(.black)
+                    
                 Spacer()
                 ZStack(alignment: .trailing) {
                     if viewModel.weight.isEmpty {
@@ -38,7 +38,7 @@ struct TrainingWeightView: View {
             }
             .padding([.vertical], 8)
             .padding(.horizontal)
-            .background(Color.white)
+            .background(Color.bgRM)
             .cornerRadius(10)
         }
         .padding(.horizontal)

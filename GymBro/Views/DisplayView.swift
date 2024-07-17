@@ -14,14 +14,14 @@ struct DisplayView: View {
                     TrainingWeightView(viewModel: viewModel)
                 }
                 CalculateButtonView(calculateAction: viewModel.calculate)
-                Divider()
                 if viewModel.selectedSegment == 1, let result = viewModel.result {
                     ResultView(result: result, trainingWeights: viewModel.trainingWeights)
                 }
+                Divider()
                 Spacer()
                 BottomNavigationView()
             }
-            .background(Color(UIColor.systemGray6).edgesIgnoringSafeArea(.all))
+            .background(Color.bgApp.edgesIgnoringSafeArea(.all))
         }
     }
 }
