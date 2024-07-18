@@ -1,10 +1,3 @@
-//
-//  BottomNavigationView.swift
-//  GymBro
-//
-//  Created by Stefan Agusto Hutapea on 16/07/24.
-//
-
 import SwiftUI
 
 struct BottomNavigationView: View {
@@ -31,9 +24,5 @@ struct BottomNavigationView: View {
                 }
                 .tag(1)
         }
-        .padding()
-        .background(Color.bgApp)
-        .cornerRadius(20)
-        .padding(.horizontal)
     }
 }

@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "%" : {
       "localizations" : {
@@ -14,12 +21,42 @@
         }
       }
     },
+    "%.1f" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%.1fkg" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
     "%@" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         }
       }
@@ -95,12 +132,32 @@
         }
       }
     },
+    "No Records" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data Kosong"
+          }
+        }
+      }
+    },
     "Please Input to show your 1RM" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Harap masukan data untuk menampilkan 1 RM anda"
+          }
+        }
+      }
+    },
+    "Progression Record" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riwayat Perkembangan"
           }
         }
       }
@@ -145,12 +202,32 @@
         }
       }
     },
+    "There is no Record Available" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data tidak tersedia"
+          }
+        }
+      }
+    },
     "Till tired, I can do" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Banyak Repetisi"
+          }
+        }
+      }
+    },
+    "Weight" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beban"
           }
         }
       }

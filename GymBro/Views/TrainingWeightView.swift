@@ -1,10 +1,3 @@
-//
-//  TrainingWeightView.swift
-//  GymBro
-//
-//  Created by Stefan Agusto Hutapea on 16/07/24.
-//
-
 import SwiftUI
 
 struct TrainingWeightView: View {
@@ -45,7 +38,3 @@ struct TrainingWeightView: View {
         .padding(.horizontal)
     }
 }
-
-//#Preview {
-//    TrainingWeightView()
-//}

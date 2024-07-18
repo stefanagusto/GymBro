@@ -1,10 +1,3 @@
-//
-//  HeaderViewRecord.swift
-//  GymBro
-//
-//  Created by Benedick Wijayaputra on 17/07/24.
-//
-
 import SwiftUI
 
 struct HeaderViewRecord: View {
@@ -14,7 +7,6 @@ struct HeaderViewRecord: View {
             .padding(.top, 44)
             .padding(.trailing, 75)
             .multilineTextAlignment(.leading)
-        
         
         Divider()
     }

@@ -1,10 +1,3 @@
-//
-//  TrainingWeightTable.swift
-//  GymBro
-//
-//  Created by Stefan Agusto Hutapea on 16/07/24.
-//
-
 import SwiftUI
 
 struct TrainingWeightTableView: View {
@@ -27,7 +20,3 @@ struct TrainingWeightTableView: View {
         }
     }
 }
-
-//#Preview {
-//    TrainingWeightTable()
-//}

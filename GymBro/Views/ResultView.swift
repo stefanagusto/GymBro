@@ -1,10 +1,3 @@
-//
-//  ResultView.swift
-//  GymBro
-//
-//  Created by Stefan Agusto Hutapea on 16/07/24.
-//
-
 import SwiftUI
 
 struct ResultView: View {
@@ -33,7 +26,6 @@ struct ResultView: View {
             ScrollView {
                 TrainingWeightTableView(trainingWeights: trainingWeights)
             }
-//            .frame(maxHeight: 500) // Set a max height for the scroll view
             .frame(height: 200)
         }
         .background(Color.bgRM)
@@ -41,7 +33,3 @@ struct ResultView: View {
         .padding()
     }
 }
-
-//#Preview {
-//    ResultView()
-//}

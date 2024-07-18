@@ -1,10 +1,3 @@
-//
-//  OneRepMaxCalculator.swift
-//  GymBro
-//
-//  Created by Stefan Agusto Hutapea on 16/07/24.
-//
-
 import Foundation
 
 struct OneRepMaxCalculatorViewModel {

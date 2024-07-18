@@ -1,10 +1,3 @@
-//
-//  RecordButtonView.swift
-//  GymBro
-//
-//  Created by Benedick Wijayaputra on 17/07/24.
-//
-
 import SwiftUI
 
 struct RecordButtonView: View {

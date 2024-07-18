@@ -1,18 +1,9 @@
-//
-//  RecordProgressionView.swift
-//  GymBro
-//
-//  Created by Benedick Wijayaputra on 17/07/24.
-//
-
 import SwiftUI
 import SwiftData
 
 struct RecordProgressionView: View {
     @Environment(\.modelContext) private var context
     @Query(sort: \RecordModel.date) private var records: [RecordModel]
-    
-   
     
     var body: some View {
         NavigationStack {
@@ -38,7 +29,7 @@ struct RecordProgressionView: View {
                     }
                 }
             }
-            .background(Color(UIColor.systemGray6).edgesIgnoringSafeArea(.all))
+            .background(Color(.bgApp).edgesIgnoringSafeArea(.all))
         }
     }
 }
@@ -50,12 +41,12 @@ struct ExpenseCell: View {
         VStack(alignment: .leading, spacing: 15) {
             Text(record.formattedDate)
                 .font(.system(size: 15))
-                .foregroundStyle(Color.gray)
+                .foregroundColor(.gray)
             
             HStack(spacing: 100) {
                 RoundedRectangle(cornerRadius: 30)
                     .foregroundColor(.blue)
-                    .frame(width: 87, height: 36)
+                    .frame(width: 95, height: 40)
                     .overlay {
                         Text("\(record.result, specifier: "%.1f")kg")
                             .font(.system(size: 22, weight: .bold))
