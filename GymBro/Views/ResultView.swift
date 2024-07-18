@@ -36,7 +36,7 @@ struct ResultView: View {
 //            .frame(maxHeight: 500) // Set a max height for the scroll view
             .frame(height: 200)
         }
-        .background(Color.white)
+        .background(Color.bgRM)
         .cornerRadius(10)
         .padding()
     }

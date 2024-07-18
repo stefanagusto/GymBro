@@ -27,15 +27,15 @@ struct DisplayView: View {
                     CalculateButtonView(calculateAction: viewModel.calculate)
                 }
 
-                Divider()
-
                 if viewModel.selectedSegment == 1, let result = viewModel.result {
                     ResultView(result: result, trainingWeights: viewModel.trainingWeights)
                 }
+                Divider()
                 Spacer()
             }
-            .background(Color(UIColor.systemGray6).edgesIgnoringSafeArea(.all))
-            .environment(\.modelContext, context) // Pass the context to child views
+
+            .background(Color.bgApp.edgesIgnoringSafeArea(.all))
+
         }
     }
 }

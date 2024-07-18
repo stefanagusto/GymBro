@@ -31,5 +31,9 @@ struct BottomNavigationView: View {
                 }
                 .tag(1)
         }
+        .padding()
+        .background(Color.bgApp)
+        .cornerRadius(20)
+        .padding(.horizontal)
     }
 }
