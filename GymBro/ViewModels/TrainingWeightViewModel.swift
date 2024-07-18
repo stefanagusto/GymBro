@@ -1,22 +1,32 @@
+//
+//  TrainingWeightViewModel.swift
+//  GymBro
+//
+//  Created by Benedick Wijayaputra on 17/07/24.
+//
+
 import Foundation
 import Combine
+import SwiftData
 
 class TrainingWeightViewModel: ObservableObject {
     @Published var weight: String = ""
     @Published var reps: String = ""
-    @Published var selectedSegment = 0
+    @Published var selectedSegment: Int = 0
     @Published var result: Double?
     @Published var trainingWeights: [TrainingWeightModel] = []
     @Published var oneRepMax: String = "0"
     @Published var inputEntered: Bool = false
     @Published var resultShow: Bool = false
-
+    
     private var cancellables = Set<AnyCancellable>()
     private let calculator = OneRepMaxCalculatorViewModel()
-    
-    let segments = ["1 Rep Max", "Training Weight"]
+
+    let segments: [String] = ["1 Rep Max", "Training Weight"]
     let percentages: [Double] = [100, 95, 90, 85, 80, 75, 70]
     let repetitions: [Double] = [1, 2, 4, 6, 8, 10, 12]
+    
+    init() {}
     
     private func calculateOneRepMax(weight: String, reps: String) -> String {
         guard let weight = Double(weight), let reps = Int(reps), reps > 0 else {
@@ -26,15 +36,15 @@ class TrainingWeightViewModel: ObservableObject {
         self.result = result
         return String(format: "%.2f", result)
     }
-    
+
     func calculate() {
         guard let weightValue = Double(weight) else {
             result = nil
             return
         }
-        
+
         inputEntered = true
-        
+
         if selectedSegment == 0 {
             oneRepMax = calculateOneRepMax(weight: weight, reps: reps)
             resultShow = true

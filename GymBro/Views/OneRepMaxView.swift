@@ -1,4 +1,12 @@
+//
+//  OneRepMaxView.swift
+//  GymBro
+//
+//  Created by Benedick Wijayaputra on 17/07/24.
+//
+
 import SwiftUI
+import SwiftData
 
 struct OneRepMaxView: View {
     @ObservedObject var viewModel: TrainingWeightViewModel
@@ -12,7 +20,6 @@ struct OneRepMaxView: View {
                     .font(.system(size: 17, weight: .bold))
                 Spacer()
             }
-//            .padding(.horizontal)
             .padding(.trailing, 75)
             
             VStack(alignment: .center, spacing: 10) {
@@ -52,7 +59,7 @@ struct OneRepMaxView: View {
                             .keyboardType(.decimalPad)
                             .multilineTextAlignment(.trailing)
                             .frame(width: 60)
-                            
+
                     }
                 }
                 .padding([.vertical], 8)

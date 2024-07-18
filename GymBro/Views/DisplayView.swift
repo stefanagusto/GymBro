@@ -1,8 +1,17 @@
+//
+//  DisplayView.swift
+//  GymBro
+//
+//  Created by Benedick Wijayaputra on 17/07/24.
+//
+
 import SwiftUI
+import SwiftData
 
 struct DisplayView: View {
-    @EnvironmentObject private var viewModel: TrainingWeightViewModel
-    
+    @EnvironmentObject var viewModel: TrainingWeightViewModel
+    @Environment(\.modelContext) private var context
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -11,6 +20,7 @@ struct DisplayView: View {
                 if viewModel.selectedSegment == 0 {
                     OneRepMaxView(viewModel: viewModel)
                     CalculateButtonView(calculateAction: viewModel.calculate)
+                    
                     RecordButtonView()
                 } else {
                     TrainingWeightView(viewModel: viewModel)
@@ -22,16 +32,10 @@ struct DisplayView: View {
                 }
                 Divider()
                 Spacer()
-                BottomNavigationView()
             }
-            .background(Color.bgApp.edgesIgnoringSafeArea(.all))
-        }
-    }
-}
 
-struct Epic2_Previews: PreviewProvider {
-    static var previews: some View {
-        DisplayView()
-            .environmentObject(TrainingWeightViewModel())
+            .background(Color.bgApp.edgesIgnoringSafeArea(.all))
+
+        }
     }
 }
